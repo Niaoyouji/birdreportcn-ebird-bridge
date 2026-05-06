@@ -57,8 +57,6 @@ getLatinName('黑苇鳽')       // → 'Botaurus flavicollis'
 | `zh_TW` | 1239 (82%) | 311 | Wikidata（CC0） |
 | `zh_HK` | 544 (36%) | — | Wikidata（CC0） |
 | `en` | 1508 (100%) | — | IOC |
-| `ja` | 1346 (89%) | — | Wikidata（CC0） |
-| `ko` | 498 (33%) | — | Wikidata（CC0） |
 
 其中 962 个物种的台湾名与简中实质性不同（不是简单繁简转换），例如：
 
@@ -76,9 +74,7 @@ getLatinName('黑苇鳽')       // → 'Botaurus flavicollis'
     "zh_CN": { "primary": "仙八色鸫" },
     "zh_TW": { "primary": "八色鳥" },
     "zh_HK": { "primary": "仙八色鶇" },
-    "en":    { "primary": "Fairy Pitta" },
-    "ja":    { "primary": "ヤイロチョウ" },
-    "ko":    { "primary": "팔색조" }
+    "en":    { "primary": "Fairy Pitta" }
   }
 }
 ```

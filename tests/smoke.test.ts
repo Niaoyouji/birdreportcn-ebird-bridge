@@ -140,10 +140,6 @@ describe('name-bridge (high-level)', () => {
     expect(getHongKongName('鸳鸯')).toBe('鴛鴦')
   })
 
-  it('Japanese name available as bonus', () => {
-    const sp = resolveName('鸳鸯')
-    expect(sp?.primary.ja).toBeTruthy()
-  })
 
   it('getEnglishName / getLatinName', () => {
     expect(getEnglishName('黑苇鳽')).toBe('Black Bittern')
@@ -177,22 +173,19 @@ describe('name-bridge (high-level)', () => {
     expect(results.every(s => s.names.zh_CN?.primary?.startsWith('红翅'))).toBe(true)
   })
 
-  it('listSupportedLanguages reports zh_CN, zh_TW, zh_HK, en, ja, ko', () => {
+  it('listSupportedLanguages reports zh_CN, zh_TW, zh_HK, en', () => {
     const langs = listSupportedLanguages()
-    expect(langs).toContain('zh_CN')
-    expect(langs).toContain('zh_TW')
-    expect(langs).toContain('zh_HK')
-    expect(langs).toContain('en')
-    expect(langs).toContain('ja')
-    expect(langs).toContain('ko')
+    expect(langs).toEqual(expect.arrayContaining(['zh_CN', 'zh_TW', 'zh_HK', 'en']))
+    expect(langs).not.toContain('ja')
+    expect(langs).not.toContain('ko')
   })
 
-  it('getCoverageStats reports expected ranges (post-Wikidata merge)', () => {
+  it('getCoverageStats reports expected ranges', () => {
     const stats = getCoverageStats()
     expect(stats['zh_CN']?.primary).toBe(1508)
     expect(stats['zh_TW']?.primary).toBeGreaterThan(1000)
     expect(stats['zh_HK']?.primary).toBeGreaterThan(400)
-    expect(stats['ja']?.primary).toBeGreaterThan(1000)
+    expect(stats['en']?.primary).toBe(1508)
   })
 })
 

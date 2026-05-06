@@ -1,7 +1,7 @@
 {
   "name": "@niaoyouji/chinese-bird-name-bridge",
   "version": "0.1.0-alpha.3",
-  "description": "Multilingual Chinese bird name interoperability layer: alignment across Simplified Chinese (Zheng4), Traditional Chinese (Taiwan/HK), English, Japanese, Korean, and Latin (IOC ↔ Clements). Includes observation-format conversion utilities (eBird ↔ BirdReportCN).",
+  "description": "Multilingual Chinese bird name interoperability layer: alignment across Simplified Chinese (Zheng4), Traditional Chinese (Taiwan/HK), English, and Latin (IOC ↔ Clements). Includes observation-format conversion utilities (eBird ↔ BirdReportCN).",
   "type": "module",
   "keywords": [
     "birding",

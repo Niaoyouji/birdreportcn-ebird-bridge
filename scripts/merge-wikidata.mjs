@@ -11,7 +11,6 @@
  * - zh_HK.primary：WD zh-hk（不存在则不创建该条目）
  * - zh_HK.aliases：WD zh_hk_alts
  * - en.primary 保持鸟有记原值（IOC）
- * - 新增 ja.primary, ko.primary（来自 WD）
  * - species.wikidata_qid 作为元数据保存
  *
  * 用法：node scripts/merge-wikidata.mjs
@@ -60,8 +59,6 @@ function main() {
     zh_TW_aliases_added: 0,
     zh_HK_added: 0,
     zh_HK_aliases_added: 0,
-    ja_added: 0,
-    ko_added: 0,
     qid_added: 0
   }
 
@@ -107,15 +104,6 @@ function main() {
       if (ns?.aliases?.length) stats.zh_HK_aliases_added++
     }
 
-    // ja, ko
-    if (w.ja) {
-      sp.names.ja = { primary: w.ja }
-      stats.ja_added++
-    }
-    if (w.ko) {
-      sp.names.ko = { primary: w.ko }
-      stats.ko_added++
-    }
   }
 
   db.version = 'ioc-15.1+wikidata-2026-05-06'
@@ -125,9 +113,7 @@ function main() {
     zh_CN: '简体中文（兼容郑四第 4 版主名 + 鸟有记整理别名 + Wikidata 增补）',
     zh_TW: '繁体中文 / 台湾国语（来自 Wikidata zh-tw / zh-hant）',
     zh_HK: '繁体中文 / 香港用法（来自 Wikidata zh-hk）',
-    en: 'IOC 英文名',
-    ja: '日本語（来自 Wikidata ja）',
-    ko: '한국어（来自 Wikidata ko）'
+    en: 'IOC 英文名'
   }
   db.fields = {
     latin: 'IOC 拉丁学名（二项式或含亚种）',
@@ -144,7 +130,7 @@ function main() {
   console.log(`\nWritten: ${dbPath}`)
 
   // Coverage report
-  const cov = { zh_CN: 0, zh_TW: 0, zh_HK: 0, en: 0, ja: 0, ko: 0 }
+  const cov = { zh_CN: 0, zh_TW: 0, zh_HK: 0, en: 0 }
   const aliasCov = { zh_CN: 0, zh_TW: 0, zh_HK: 0 }
   for (const sp of db.species) {
     for (const k of Object.keys(cov)) if (sp.names[k]?.primary) cov[k]++

@@ -31,8 +31,6 @@ function buildQuery(binomials) {
   (SAMPLE(?zh_cn_)   AS ?zh_cn)
   (SAMPLE(?zh_tw_)   AS ?zh_tw)
   (SAMPLE(?zh_hk_)   AS ?zh_hk)
-  (SAMPLE(?ja_)      AS ?ja)
-  (SAMPLE(?ko_)      AS ?ko)
   (GROUP_CONCAT(DISTINCT ?alt_zh_tw; separator="|") AS ?zh_tw_alts)
   (GROUP_CONCAT(DISTINCT ?alt_zh_hk; separator="|") AS ?zh_hk_alts)
   (GROUP_CONCAT(DISTINCT ?alt_zh_hant; separator="|") AS ?zh_hant_alts)
@@ -46,8 +44,6 @@ WHERE {
   OPTIONAL { ?taxon rdfs:label ?zh_cn_   FILTER(LANG(?zh_cn_)   = "zh-cn") }
   OPTIONAL { ?taxon rdfs:label ?zh_tw_   FILTER(LANG(?zh_tw_)   = "zh-tw") }
   OPTIONAL { ?taxon rdfs:label ?zh_hk_   FILTER(LANG(?zh_hk_)   = "zh-hk") }
-  OPTIONAL { ?taxon rdfs:label ?ja_      FILTER(LANG(?ja_)      = "ja") }
-  OPTIONAL { ?taxon rdfs:label ?ko_      FILTER(LANG(?ko_)      = "ko") }
   OPTIONAL { ?taxon skos:altLabel ?alt_zh_tw    FILTER(LANG(?alt_zh_tw)    = "zh-tw") }
   OPTIONAL { ?taxon skos:altLabel ?alt_zh_hk    FILTER(LANG(?alt_zh_hk)    = "zh-hk") }
   OPTIONAL { ?taxon skos:altLabel ?alt_zh_hant  FILTER(LANG(?alt_zh_hant)  = "zh-hant") }
@@ -96,7 +92,6 @@ async function main() {
     matched: 0,
     en: 0, zh: 0, zh_hans: 0, zh_hant: 0,
     zh_cn: 0, zh_tw: 0, zh_hk: 0,
-    ja: 0, ko: 0,
     zh_tw_alts: 0, zh_hk_alts: 0, zh_hant_alts: 0
   }
 
@@ -130,14 +125,12 @@ async function main() {
         zh_cn: pickValue(r, 'zh_cn'),
         zh_tw: pickValue(r, 'zh_tw'),
         zh_hk: pickValue(r, 'zh_hk'),
-        ja: pickValue(r, 'ja'),
-        ko: pickValue(r, 'ko'),
         zh_tw_alts: pickAltList(r, 'zh_tw_alts'),
         zh_hk_alts: pickAltList(r, 'zh_hk_alts'),
         zh_hant_alts: pickAltList(r, 'zh_hant_alts')
       }
       stats.matched++
-      for (const k of ['en', 'zh', 'zh_hans', 'zh_hant', 'zh_cn', 'zh_tw', 'zh_hk', 'ja', 'ko']) {
+      for (const k of ['en', 'zh', 'zh_hans', 'zh_hant', 'zh_cn', 'zh_tw', 'zh_hk']) {
         if (results[binom][k]) stats[k]++
       }
       for (const k of ['zh_tw_alts', 'zh_hk_alts', 'zh_hant_alts']) {
@@ -161,7 +154,7 @@ async function main() {
   console.log('\n=== SUMMARY ===')
   console.log(`Queried: ${stats.queried} / Matched: ${stats.matched} (${(100 * stats.matched / stats.queried).toFixed(1)}%)`)
   console.log('Coverage (matched only):')
-  for (const k of ['en', 'zh', 'zh_hans', 'zh_hant', 'zh_cn', 'zh_tw', 'zh_hk', 'ja', 'ko', 'zh_tw_alts', 'zh_hk_alts', 'zh_hant_alts']) {
+  for (const k of ['en', 'zh', 'zh_hans', 'zh_hant', 'zh_cn', 'zh_tw', 'zh_hk', 'zh_tw_alts', 'zh_hk_alts', 'zh_hant_alts']) {
     const pct = stats.matched > 0 ? (100 * stats[k] / stats.matched).toFixed(1) : '0.0'
     console.log(`  ${k.padEnd(15)} ${String(stats[k]).padStart(5)} / ${stats.matched}  (${pct}%)`)
   }
