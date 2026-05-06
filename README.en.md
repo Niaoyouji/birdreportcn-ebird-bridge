@@ -1,10 +1,14 @@
 # Chinese Bird Name Bridge
 
+[![npm](https://img.shields.io/npm/v/@niaoyouji/chinese-bird-name-bridge.svg)](https://www.npmjs.com/package/@niaoyouji/chinese-bird-name-bridge)
+[![Code License: MIT](https://img.shields.io/badge/code-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Data License: CC BY-NC 4.0](https://img.shields.io/badge/data-CC%20BY--NC%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+
 A multilingual alignment dataset and query library for Chinese bird names — Simplified Chinese / Traditional Chinese (Taiwan, Hong Kong) / English / Latin (IOC, Clements). Includes observation data format conversion utilities as a side feature.
 
 This library is a byproduct of building the [Niaoyouji 鸟有记](https://github.com/Niaoyouji) mini-app, open-sourced as a contribution to the Chinese-speaking birding community.
 
-[中文 README](./README.md) · English
+[中文 README](https://github.com/Niaoyouji/Chinese-bird-name-bridge/blob/main/README.md) · English
 
 ---
 
@@ -99,8 +103,8 @@ The Niaoyouji mini-app supports converting observation data between eBird and Bi
 
 ## License
 
-- **Code**: MIT — see [`LICENSE`](./LICENSE)
-- **Data**: CC BY-NC 4.0 — see [`LICENSE-DATA`](./LICENSE-DATA)
+- **Code**: MIT — see [`LICENSE`](https://github.com/Niaoyouji/Chinese-bird-name-bridge/blob/main/LICENSE)
+- **Data**: CC BY-NC 4.0 — see [`LICENSE-DATA`](https://github.com/Niaoyouji/Chinese-bird-name-bridge/blob/main/LICENSE-DATA)
   - Free for personal, academic, and non-commercial open-source use
   - Commercial redistribution of the data requires a separate license
 
@@ -122,7 +126,7 @@ PRs welcome for:
 3. Filling zh_HK primary names (currently 36%)
 4. Fixing the 11 unmatched species (taxonomic shifts)
 
-Please read [`docs/mapping-methodology.md`](./docs/mapping-methodology.md) before contributing.
+Please read [`docs/mapping-methodology.md`](https://github.com/Niaoyouji/Chinese-bird-name-bridge/blob/main/docs/mapping-methodology.md) before contributing.
 
 ---
 

@@ -1,10 +1,14 @@
 # Chinese Bird Name Bridge
 
+[![npm](https://img.shields.io/npm/v/@niaoyouji/chinese-bird-name-bridge.svg)](https://www.npmjs.com/package/@niaoyouji/chinese-bird-name-bridge)
+[![Code License: MIT](https://img.shields.io/badge/code-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Data License: CC BY-NC 4.0](https://img.shields.io/badge/data-CC%20BY--NC%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+
 中文鸟名多语言对齐数据集与查询工具。提供简体中文 / 繁体中文（台湾、香港）/ 英文 / 拉丁名（IOC、Clements）的双向映射，附带观察数据格式转换工具。
 
 本库是 [鸟有记 / Niaoyouji](https://github.com/Niaoyouji) 小程序开发过程中沉淀下来的产物，开源出来希望对中文观鸟社区做点贡献。
 
-中文 README · [English README](./README.en.md)
+中文 README · [English README](https://github.com/Niaoyouji/Chinese-bird-name-bridge/blob/main/README.en.md)
 
 ---
 
@@ -99,8 +103,8 @@ getLatinName('黑苇鳽')       // → 'Botaurus flavicollis'
 
 ## 协议
 
-- **代码**：MIT — 见 [`LICENSE`](./LICENSE)
-- **数据**：CC BY-NC 4.0 — 见 [`LICENSE-DATA`](./LICENSE-DATA)
+- **代码**：MIT — 见 [`LICENSE`](https://github.com/Niaoyouji/Chinese-bird-name-bridge/blob/main/LICENSE)
+- **数据**：CC BY-NC 4.0 — 见 [`LICENSE-DATA`](https://github.com/Niaoyouji/Chinese-bird-name-bridge/blob/main/LICENSE-DATA)
   - 个人 / 学术 / 非商业开源使用免费
   - 商业产品再分发数据请联系作者
 
@@ -122,7 +126,7 @@ getLatinName('黑苇鳽')       // → 'Botaurus flavicollis'
 3. 补充 zh_HK 主名（当前覆盖率 36%）
 4. 修正未匹配的 11 个分类异动种
 
-提交前请阅读 [`docs/mapping-methodology.md`](./docs/mapping-methodology.md)。
+提交前请阅读 [`docs/mapping-methodology.md`](https://github.com/Niaoyouji/Chinese-bird-name-bridge/blob/main/docs/mapping-methodology.md)。
 
 ---
 
