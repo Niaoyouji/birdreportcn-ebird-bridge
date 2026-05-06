@@ -1,0 +1,57 @@
+DATA LICENSE — Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+
+The data files in the `data/` directory of this repository are licensed under
+the Creative Commons Attribution-NonCommercial 4.0 International License
+(CC BY-NC 4.0).
+
+You are free to:
+  - Share — copy and redistribute the material in any medium or format
+  - Adapt — remix, transform, and build upon the material
+
+Under the following terms:
+  - Attribution — You must give appropriate credit, provide a link to the
+    license, and indicate if changes were made.
+  - NonCommercial — You may not use the material for commercial purposes.
+
+Required attribution format (any of the following is acceptable):
+
+  "Data from Niaoyouji Chinese-bird-name-bridge (CC BY-NC 4.0),
+   https://github.com/Niaoyouji/Chinese-bird-name-bridge"
+
+Full license text: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+---
+
+Notes on the NonCommercial restriction:
+
+This license restricts COMMERCIAL REDISTRIBUTION of the data files. The
+following uses are explicitly permitted:
+
+  - Personal use, learning, research, journalism
+  - Use within open-source non-commercial projects
+  - Internal use within an organization (including commercial entities) that
+    does not redistribute the data as a commercial product
+  - Use in academic publications with proper citation
+
+If you wish to use this data in a commercial product (e.g., a paid app
+that bundles or syncs the alignment table), please contact the maintainers
+to discuss a separate commercial license.
+
+---
+
+Files covered by this license:
+  - data/ioc-species-db.json
+  - data/ebird-clements-overrides.json
+  - data/ebird-zh-overrides.json
+  - data/ebird-province-codes.json
+
+Source attributions for upstream data:
+  - IOC World Bird List: https://www.worldbirdnames.org/  (CC BY)
+  - eBird/Clements Checklist: https://www.birds.cornell.edu/clementschecklist/
+    (Cornell Lab of Ornithology — used here for cross-reference)
+  - Avibase (multilingual aliases including Traditional Chinese / Taiwan
+    names, when populated): https://avibase.bsc-eoc.org/  (CC BY-NC 4.0)
+  - A Checklist on the Classification and Distribution of the Birds of
+    China, 4th Edition (郑光美 等编, Science Press)
+  - Chinese name compatibility (including older Zheng's Checklist names
+    and regional variants): curated by Niaoyouji

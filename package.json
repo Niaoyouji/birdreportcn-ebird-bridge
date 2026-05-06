@@ -1,0 +1,67 @@
+{
+  "name": "@niaoyouji/chinese-bird-name-bridge",
+  "version": "0.1.0-alpha.3",
+  "description": "Multilingual Chinese bird name interoperability layer: alignment across Simplified Chinese (Zheng4), Traditional Chinese (Taiwan/HK), English, Japanese, Korean, and Latin (IOC ↔ Clements). Includes observation-format conversion utilities (eBird ↔ BirdReportCN).",
+  "type": "module",
+  "keywords": [
+    "birding",
+    "ebird",
+    "birdreportcn",
+    "china-birding",
+    "taiwan-birds",
+    "hong-kong-birds",
+    "ornithology",
+    "ioc",
+    "clements",
+    "zheng-checklist",
+    "avibase",
+    "taxonomy",
+    "multilingual",
+    "chinese-bird-names",
+    "citizen-science"
+  ],
+  "author": "Niaoyouji <https://github.com/Niaoyouji>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Niaoyouji/Chinese-bird-name-bridge.git"
+  },
+  "homepage": "https://github.com/Niaoyouji/Chinese-bird-name-bridge",
+  "bugs": {
+    "url": "https://github.com/Niaoyouji/Chinese-bird-name-bridge/issues"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./data/*.json": "./data/*.json"
+  },
+  "files": [
+    "dist/",
+    "data/",
+    "README.md",
+    "README.en.md",
+    "LICENSE",
+    "LICENSE-DATA"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  }
+}

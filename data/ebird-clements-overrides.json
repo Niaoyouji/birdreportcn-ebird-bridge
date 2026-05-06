@@ -1,0 +1,30 @@
+{
+  "version": "ioc-15.1_clements-2024-10",
+  "description": "IOC World Bird List → eBird/Clements 拉丁学名映射，仅含分类拆并/改名差异（约 18 条）。键为 IOC 二项式，值为对应的 Clements 二项式。",
+  "license": "CC BY-NC 4.0",
+  "source": "https://github.com/Niaoyouji/Chinese-bird-name-bridge",
+  "notes": [
+    "IOC 与 Clements 的二项式绝大多数一致，本文件仅记录差异。",
+    "差异来源：分类系统对属归并的判断不同（如 Accipiter→Astur/Tachyspiza），或种级别拆并差异（如 Curruca minula 在 Clements 并入 Curruca curruca）。"
+  ],
+  "mapping": {
+    "Acanthis hornemanni": "Acanthis flammea",
+    "Accipiter gentilis": "Astur gentilis",
+    "Accipiter soloensis": "Tachyspiza soloensis",
+    "Accipiter virgatus": "Tachyspiza virgata",
+    "Aegithalos bonvaloti": "Aegithalos iouschistos",
+    "Bubulcus coromandus": "Ardea coromanda",
+    "Carpodacus lepidus": "Carpodacus sibiricus",
+    "Cecropis striolata": "Cecropis daurica",
+    "Chloropsis lazulina": "Chloropsis hardwickii",
+    "Curruca althaea": "Curruca curruca",
+    "Curruca minula": "Curruca curruca",
+    "Cyanoderma ambiguum": "Cyanoderma rufifrons",
+    "Emberiza yunnanensis": "Emberiza godlewskii",
+    "Garrulax owstoni": "Garrulax canorus",
+    "Ixobrychus minutus": "Botaurus minutus",
+    "Parus minor": "Parus cinereus",
+    "Picoides kizuki": "Yungipicus kizuki",
+    "Strix davidi": "Strix uralensis"
+  }
+}
